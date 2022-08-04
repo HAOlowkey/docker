@@ -15,7 +15,6 @@ RUN groupadd -g 1001 mysql \
   && rpmkeys --import /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql \
   && yum install -y \
       "mysql-community-server-${MYSQL_VERSION}" \
-      "mysql-shell" \
   && yum clean all
 
 CMD ["/bin/bash"]
