@@ -18,6 +18,7 @@ RUN groupadd -g 1001 mysql \
       "mysql-community-client-${MYSQL_VERSION}" \
       "mysql-community-client-plugins-${MYSQL_VERSION}" \
       "mysql-community-libs-${MYSQL_VERSION}" \
+      "mysql-community-common-${MYSQL_VERSION}" \
   && yum clean all
 
 CMD ["/bin/bash"]
