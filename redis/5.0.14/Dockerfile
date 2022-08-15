@@ -19,6 +19,7 @@ RUN groupadd -g 1001 redis \
  && rpmkeys --import /etc/pki/rpm-gpg/RPM-GPG-KEY-remi \
  && yum install -y \
      "redis-${REDIS_VERSION}" \
- && yum clean all
+ && yum clean all \
+ && mkdir /data
 
 CMD ["/bin/bash"]
