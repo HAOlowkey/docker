@@ -20,4 +20,13 @@ gpgkey=https://repo.proxysql.com/ProxySQL/proxysql-2.4.x/repo_pub_key \n '\
  && yum clean all \
  && rm -rf /var/cache/yum
 
+# install mysql-client
+RUN yum install -y https://repo.mysql.com/mysql80-community-release-el7.rpm \
+  && yum-config-manager --enable mysql80-server \
+  && rpmkeys --import /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql \
+  && yum install -y \
+      "mysql-community-client-${MYSQL_VERSION}" \
+      "mysql-community-client-plugins-${MYSQL_VERSION}" \
+  && yum clean all
+
 CMD ["/bin/bash"]
