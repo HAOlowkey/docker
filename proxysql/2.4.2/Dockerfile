@@ -1,6 +1,7 @@
 FROM amd64/centos:7.9.2009
 
 ENV PROXYSQL_VERSION="2.4.2" \
+    MYSQL_VERSION="8.0.26" \
     PROXYSQL_INITIALIZER_VERSION="1.0.5" \
     SUMMARY="High-performance MySQL proxy" \
     DESCRIPTION="ProxySQL is a high performance, high availability, protocol aware proxy for MySQL \
