@@ -28,6 +28,7 @@ RUN yum install -y https://repo.mysql.com/mysql80-community-release-el7.rpm \
   && yum install -y \
       "mysql-community-client-${MYSQL_VERSION}" \
       "mysql-community-client-plugins-${MYSQL_VERSION}" \
+      "mysql-community-libs-${MYSQL_VERSION}" \
   && yum clean all
 
 CMD ["/bin/bash"]
